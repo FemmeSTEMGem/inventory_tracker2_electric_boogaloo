@@ -12,6 +12,9 @@ class Item < ApplicationRecord
 
   # == Validations ==========================================================
 
+  validates :name, presence: true
+  validates :description, presence: true, length: { minimum: 10 }
+
   # == Callbacks ============================================================
 
   # == Scopes ===============================================================

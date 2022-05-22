@@ -1,0 +1,13 @@
+<h1><%= @item.name %></h1>
+
+  <ul>
+  <li>Description: <%= @item.description %></li>
+  <li>Quantity: <%= @item.quantity %></li>
+  <li>Location: <%= @item.location %></li>
+</ul>
+
+<div><%= link_to "Edit", edit_item_path(@item) %></div>
+<div><%= link_to "Destroy", item_path(@item),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+</div>
