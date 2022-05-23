@@ -1,0 +1,7 @@
+<h1><%= @location.name %></h1>
+
+
+
+<div><%= link_to "Edit", edit_location_path(@location) %></div>
+  <div><%= button_to "Destroy (and all items here)", location_path(@location), method: :delete %>
+</div>
