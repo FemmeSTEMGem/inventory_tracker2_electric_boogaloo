@@ -1,5 +1,13 @@
 <h1><%= @location.name %></h1>
-
+<br>
+<h2>Inventory at this location:</h2>
+<ul>
+  <% @location.item_locations.each do |item_location| %>
+    <li>
+      <%= item_location.item.name %>: <%= item_location.quantity %>
+    </li>
+  <% end %>
+</ul>
 
 
 <div><%= link_to "Edit", edit_location_path(@location) %></div>
