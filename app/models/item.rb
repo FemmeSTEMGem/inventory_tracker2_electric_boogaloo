@@ -7,13 +7,12 @@ class Item < ApplicationRecord
 
   # == Relationships ========================================================
 
-  has_many :item_locations
+  has_many :item_locations, dependent: :destroy
   has_many :locations
 
   # == Validations ==========================================================
 
   validates :name, presence: true
-  validates :description, presence: true, length: { minimum: 10 }
 
   # == Callbacks ============================================================
 
