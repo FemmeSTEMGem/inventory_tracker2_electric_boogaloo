@@ -1,0 +1,21 @@
+<h1>Create Inventory from NOTHING!</h1>
+
+<%= form_with url: "create_inventory_action" do |form| %>
+  <div>
+    <%= form.label :item %><br>
+    <%= form.select :item, @item_names %>
+  </div>
+
+  <div>
+    <%= form.label :location %><br>
+    <%= form.select :location, @location_names %>
+  </div>
+
+  <div>
+    <%= form.label :quantity %><br>
+    <%= form.number_field :quantity %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
